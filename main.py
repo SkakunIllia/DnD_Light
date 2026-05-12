@@ -3,6 +3,7 @@ from datetime import datetime
 from glob import glob
 from functools import wraps
 from time import sleep
+from random import shuffle
 
 # Logo
 
@@ -182,12 +183,18 @@ def class_choice():
         logger.debug("def class_choice - rechoosing the class or the name")
         return class_choice()
 
+@separator
+@dlog()
+def quest_complete(q, player):
+    luck = Entities.random()
+    res = q.complete(luck)
+    print("OK") if res else print("NOK")
 
 # Global variables:
 delay_time = 1
 
 
-@dlog("def main invocation")
+@dlog()
 def main():
     # logo()
     # greeting()
@@ -198,8 +205,15 @@ def main():
     # next_thing()
 
     player = class_choice()
-    # while True:
-        
+    mobs = [Entities.Mob("Zombie" if i % 2 == 0 else "Piglin" if i % 3 == 0 else "Human") for i in range(10)]
+    shuffle(mobs)
+    quests = [Entities.Quest(f"Quest {i}") for i in range(10)]
+    print(quests)
+    while len(quests) > 0:
+        quest = quests[0]
+        quest_complete(quest, player)
+        quests.pop(0)
+    print("end")
 
     # next_thing()
 

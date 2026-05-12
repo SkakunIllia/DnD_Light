@@ -4,7 +4,7 @@ from random import randint
 # if the value of the player's 'luck' is higher than
 # the value it means that the quest has to be completed
 def random():
-    return randint(randint(20, 40), randint(50, 70))
+    return randint(randint(10, 20), randint(50, 70))
 
 def initialize_entity(player_class, player_name):
     match player_class:
@@ -106,8 +106,8 @@ class Wizard(Player):
 
 #===================================================================================
 class Mob(Player):
-    def __init__(self, name, player_class):
-        super().__init__(name, player_class)
+    def __init__(self, name):
+        super().__init__(name, "Mob")
         self.set_health(randint(70, 150))
         self._damage = random()
     def __repr__(self):
@@ -132,15 +132,16 @@ class Quest:
     def __init__(self, name):
         self._name = name
         self._random_value = random()
-        self._desc = (
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at odio eu urna accumsan dapibus vitae vel massa.\n"
-            "Mauris a venenatis arcu. Phasellus pulvinar neque et tellus fringilla dignissim. Vestibulum in justo turpis. Morbi\n"
-            "faucibus, sapien eu mollis aliquet, enim dolor scelerisque arcu, id ultrices purus leo vitae augue. Morbi feugiat nec nulla vel\n"
-            "bibendum. Sed sagittis ullamcorper nisi, sed cursus velit fermentum non. Nullam ac tempus mi, in dignissim ante. Sed at tincidunt justo,\n"
-            "et accumsan erat. Curabitur eu tellus a neque elementum rhoncus vel eu lorem. Sed vulputate mauris mi, non mollis neque tincidunt eget.\n"
-            "Quisque vel turpis sodales erat dictum ultrices at at lectus. Sed quis auctor diam. Donec in lectus id odio tempus tempor non a odio.\n"
-            "Proin odio massa, varius aliquam tempor sit amet, consectetur sit amet quam.")
-    def desc(self):
+        self._desc = "Lorem ipsum dolor sit amet"
+    def get_desc(self):
         print(self._desc)
+        return self._desc
+    def set_desc(self, desc):
+        self._desc = desc
+    def complete(self, luck):
+        print(self._desc)
+        if luck < self._random_value:
+            return False
+        return True
     def __repr__(self):
-        return f'Item[Name: {self._name}, random value: {self._random_value}]'
+        return f'Quest[Name: {self._name}, luck value to complete: {self._random_value}]'
