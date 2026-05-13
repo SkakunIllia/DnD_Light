@@ -1,11 +1,7 @@
-from random import randint
+from Auxiliary import *
 
-# Randomising value for the quest to be completed,
-# if the value of the player's 'luck' is higher than
-# the value it means that the quest has to be completed
-def random():
-    return randint(randint(10, 20), randint(50, 70))
-
+#===================================================================================
+# Functions
 def initialize_entity(player_class, player_name):
     match player_class:
         case 1: return Archer(player_name)
@@ -16,6 +12,7 @@ def initialize_entity(player_class, player_name):
         case _: return Player(player_name, "Entity")
 
 #===================================================================================
+# Base classes
 class Entity:
     def __init__(self, name):
         self._name = name
@@ -53,12 +50,13 @@ class Player(Entity):
         return self._weapon
 
 #===================================================================================
+# Player's classes
 class Archer(Player):
     def __init__(self, name):
         super().__init__(name, "Archer")
         self.set_items([])
         self.set_health(80)
-        self._weapon = Item("Relict bow", 65, "Weapon")
+        self._weapon = Weapon("Relict bow", 65)
     def __repr__(self):
         return f'Archer[Name: {self._name}, health: {self._health}, items: {self._items}, weapon: {self._weapon}]'
 
@@ -67,7 +65,7 @@ class Knight(Player):
         super().__init__(name, "Knight")
         self.set_health(120)
         self.set_items([])
-        self._weapon = Item("Silver sword", 45, "Weapon")
+        self._weapon = Weapon("Silver sword", 45)
     def __repr__(self):
         return f'Knight[Name: {self._name}, health: {self._health}, weapon: {self._weapon}]'
 
@@ -76,7 +74,7 @@ class Ogr(Player):
         super().__init__(name, "Ogr")
         self.set_health(150)
         self.set_items([])
-        self._weapon = Item("Greeny mace", 80, "Weapon")
+        self._weapon = Weapon("Greeny mace", 80)
     def __repr__(self):
         return f'Ogr[Name: {self._name}, health: {self._health}, items: {self._items}, weapon: {self._weapon}]'
 
@@ -85,7 +83,7 @@ class Gnome(Player):
         super().__init__(name, "Gnome")
         self.set_health(100)
         self.set_items([])
-        self._weapon = Item("Gold pickaxe", 50, "Weapon")
+        self._weapon = Weapon("Gold pickaxe", 50)
     def __repr__(self):
         return f'Gnome[Name: {self._name}, health: {self._health}, items: {self._items}, weapon: {self._weapon}]'
 
@@ -94,11 +92,12 @@ class Wizard(Player):
         super().__init__(name, "Wizard")
         self.set_health(80)
         self.set_items([])
-        self._weapon = Item("Magical wand", 60, "Weapon")
+        self._weapon = Weapon("Magical wand", 60)
     def __repr__(self):
         return f'Wizard[Name: {self._name}, health: {self._health}, items: {self._items}, weapon: {self._weapon}]'
 
 #===================================================================================
+# Mobs
 class Mob(Player):
     def __init__(self, name):
         super().__init__(name, "Mob")
@@ -112,16 +111,27 @@ class Mob(Player):
         self._damage = damage
 
 #===================================================================================
-class Item(Entity):
-    def __init__(self, name, damage = 0, type_of_item ="Item"):
-        super().__init__(name)
-        self._damage = damage
+# Items and weapons
+class Item:
+    def __init__(self, name, type_of_item ="Item"):
+        self._name = name
         self._type = type_of_item
     def __repr__(self):
-        return f'Item[Name: {self._name}, type: {self._type}, damage: {self._damage}]'
-    def get_damage(self):
-        return self._damage
+        return f'Item[Name: {self._name}, type: {self._type}]'
     def get_type(self):
         return self._type
+    def get_name(self):
+        return self._name
+    def set_name(self, name):
+        self._name = name
     def set_type(self, type_of_item):
         self._type = type_of_item
+
+class Weapon(Item):
+    def __init__(self, name, damage, type_of_item="Weapon"):
+        super().__init__(name, type_of_item)
+        self._damage = damage
+    def __repr__(self):
+        return f'Weapon[Name: {self._name}, type: {self._type}, damage: {self._damage}]'
+    def get_damage(self):
+        return self._damage

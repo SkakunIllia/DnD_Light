@@ -1,6 +1,4 @@
-from Entities import random, Mob
-from random import randint
-from Logger import dlog
+from Entities import *
 #===================================================================================
 # Locations and Location-Quests
 class Location:
@@ -20,10 +18,21 @@ class Location:
 
 mob_names = ["Zombie", "Skeleton", "Ogr", "Giant"]
 
-class QuestLocation(Location):
-    def __init__(self, name, desc = "Lorem ipsum"):
-        super().__init__(name, desc)
-        self._mobs = [Mob(mob_names[randint(0, len(mob_names))]) for _ in range(randint(1, 3))]
+def quest1(desc):
+    pass
+
+@dlog("getting player's option to the quest")
+def quest_get_option():
+    try:
+        while not (option := int(input("Which option would you like to pick? (Enter an integer) "))):
+            logger.debug(f"def quest_get_option - null option")
+            continue
+        if not (1 <= option <= 3):
+            logger.debug(f"def quest_get_option - improper option")
+            raise ValueError("Wrong option. Usage: 1 <= player_class <= 3")
+        return option
+    except ValueError:
+        return quest_get_option()
 
 def gen_desc_main_location():
     dsc = [("My dear friend, you have appeared to be brave enough to get here.\n"
@@ -64,3 +73,10 @@ def is_successful(option):
         return quest_complete(random(), lambda x: x > 60)
     else:
         return quest_complete(random(), lambda x: x > 40)
+
+
+
+
+@dlog()
+def quest_complete(luck, predicate):
+    return predicate(luck)
