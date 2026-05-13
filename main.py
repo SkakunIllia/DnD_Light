@@ -11,11 +11,11 @@ def main():
     # print_player_classes_description()
     # next_thing()
     #
-    # player = class_choice()
-    #
-    # next_thing()
+    player = class_choice()
 
-    game()
-    # end_of_game()
+    next_thing()
+
+    game(player)
+    end_of_game()
 
 main()

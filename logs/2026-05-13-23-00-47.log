@@ -1,0 +1,55 @@
+2026-05-13 23:00:47,081 - DEBUG - Initializing logger
+2026-05-13 23:00:47,082 - DEBUG - def main - invocation
+2026-05-13 23:00:47,082 - DEBUG - def class_choice - invocation
+2026-05-13 23:00:47,082 - DEBUG - def class_choice - choosing class
+2026-05-13 23:00:47,082 - DEBUG - def read_player_name - invocation
+2026-05-13 23:00:47,082 - DEBUG - def read_player_name - reading player's name
+2026-05-13 23:00:48,878 - DEBUG - def read_player_class - invocation
+2026-05-13 23:00:48,878 - DEBUG - def read_player_class - reading player's class
+2026-05-13 23:00:49,710 - DEBUG - def class_choice - initializing player
+2026-05-13 23:00:49,710 - DEBUG - def initialize_entity - invocation
+2026-05-13 23:00:50,881 - DEBUG - def verify_answer - invocation
+2026-05-13 23:00:50,881 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-13 23:00:50,882 - DEBUG - def class_choice - going to the game itself
+2026-05-13 23:00:50,882 - DEBUG - def next_thing - invocation
+2026-05-13 23:00:50,882 - DEBUG - def internal - invocation
+2026-05-13 23:00:50,882 - DEBUG - def internal - are we going forward?
+2026-05-13 23:00:52,373 - DEBUG - def verify_answer - invocation
+2026-05-13 23:00:52,373 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-13 23:00:52,373 - DEBUG - def next_thing - we are going forward
+2026-05-13 23:00:52,373 - DEBUG - def game - invocation
+2026-05-13 23:00:52,373 - DEBUG - def main_location1 - invocation
+2026-05-13 23:00:53,374 - DEBUG - def quest1 - invocation
+2026-05-13 23:00:53,375 - DEBUG - def quest_get_option - invocation
+2026-05-13 23:00:53,375 - DEBUG - def quest_get_option - getting player's option to the quest
+2026-05-13 23:00:55,495 - DEBUG - def quest_is_successful - invocation
+2026-05-13 23:00:55,495 - INFO - def quest_is_successful - option 3
+2026-05-13 23:00:55,495 - DEBUG - def random - invocation
+2026-05-13 23:00:55,495 - DEBUG - def quest_complete - invocation
+2026-05-13 23:00:55,495 - INFO - def quest1 - is option successful? True
+2026-05-13 23:00:57,503 - INFO - def ques1.fight - the player has started the fight
+2026-05-13 23:00:57,504 - DEBUG - def random - invocation
+2026-05-13 23:00:58,509 - INFO - def quest1 - player attack the mob 0
+2026-05-13 23:00:58,509 - DEBUG - def random - invocation
+2026-05-13 23:00:58,509 - DEBUG - def random - invocation
+2026-05-13 23:00:59,515 - INFO - def quest1 - player has won the fight
+2026-05-13 23:00:59,515 - ERROR - At quest1 occurred some unexpected error
+Traceback (most recent call last):
+  File "/Users/iliyaskakun/Documents/PJATK/2025_2026/Semestr_letni/PPY/DnD_Light/Logger.py", line 37, in wrapper
+    res = func(*args, **kwargs)
+  File "/Users/iliyaskakun/Documents/PJATK/2025_2026/Semestr_letni/PPY/DnD_Light/Auxiliary.py", line 67, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/iliyaskakun/Documents/PJATK/2025_2026/Semestr_letni/PPY/DnD_Light/Game.py", line 137, in quest1
+    fight()
+    ~~~~~^^
+  File "/Users/iliyaskakun/Documents/PJATK/2025_2026/Semestr_letni/PPY/DnD_Light/Game.py", line 102, in fight
+    player.add(Item("Diamond"))
+    ^^^^^^^^^^
+AttributeError: 'Archer' object has no attribute 'add'
+2026-05-13 23:00:59,519 - DEBUG - def next_thing - invocation
+2026-05-13 23:00:59,519 - DEBUG - def internal - invocation
+2026-05-13 23:00:59,519 - DEBUG - def internal - are we going forward?
+2026-05-13 23:01:01,422 - DEBUG - def verify_answer - invocation
+2026-05-13 23:01:01,422 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-13 23:01:01,422 - DEBUG - def next_thing - we are going forward
+2026-05-13 23:01:01,422 - DEBUG - def end_of_game - invocation

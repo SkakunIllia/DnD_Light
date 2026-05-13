@@ -32,9 +32,10 @@ class Player(Entity):
         self._health = 100
         self._weapon = None
     def attack(self, obj):
-        if random() < 30:
-            self._health -= randint(10, 25)
-        obj.set_health(obj.get_health() - self.get_weapon().get_damage())
+        while obj.get_health() > 0:
+            if random() < 30:
+                self._health -= randint(10, 25)
+            obj.set_health(obj.get_health() - self.get_weapon().get_damage())
     def __repr__(self):
         return f'Player[Name: {self._name}, health: {self._health}, items: {self._items}, weapon: {self._weapon}]'
     def set_health(self, health):
@@ -49,6 +50,8 @@ class Player(Entity):
         return self._player_class
     def get_weapon(self):
         return self._weapon
+    def add_item(self, item):
+        self._items.append(item)
 
 #===================================================================================
 # Player's classes
@@ -59,7 +62,7 @@ class Archer(Player):
         self.set_health(80)
         self._weapon = Weapon("Relict bow", 65)
     def __repr__(self):
-        return f'Archer[Name: {self._name}, health: {self._health}, items: {self._items}, weapon: {self._weapon}]'
+        return f'Archer {self._name}, {self._health}HP, items: {self._items if self._items != [] else "no items"}, weapon: {self._weapon}'
 
 class Knight(Player):
     def __init__(self, name):
@@ -68,7 +71,7 @@ class Knight(Player):
         self.set_items([])
         self._weapon = Weapon("Silver sword", 45)
     def __repr__(self):
-        return f'Knight[Name: {self._name}, health: {self._health}, weapon: {self._weapon}]'
+        return f'Knight {self._name}, {self._health}HP, items: {self._items if self._items != [] else "no items"}, weapon: {self._weapon}'
 
 class Ogr(Player):
     def __init__(self, name):
@@ -77,7 +80,7 @@ class Ogr(Player):
         self.set_items([])
         self._weapon = Weapon("Greeny mace", 80)
     def __repr__(self):
-        return f'Ogr[Name: {self._name}, health: {self._health}, items: {self._items}, weapon: {self._weapon}]'
+        return f'Ogr {self._name}, {self._health}HP, items: {self._items if self._items != [] else "no items"}, weapon: {self._weapon}'
 
 class Gnome(Player):
     def __init__(self, name):
@@ -86,7 +89,7 @@ class Gnome(Player):
         self.set_items([])
         self._weapon = Weapon("Gold pickaxe", 50)
     def __repr__(self):
-        return f'Gnome[Name: {self._name}, health: {self._health}, items: {self._items}, weapon: {self._weapon}]'
+        return f'Gnome {self._name}, {self._health}HP, items: {self._items if self._items != [] else "no items"}, weapon: {self._weapon}'
 
 class Wizard(Player):
     def __init__(self, name):
@@ -95,7 +98,7 @@ class Wizard(Player):
         self.set_items([])
         self._weapon = Weapon("Magical wand", 60)
     def __repr__(self):
-        return f'Wizard[Name: {self._name}, health: {self._health}, items: {self._items}, weapon: {self._weapon}]'
+        return f'Wizard {self._name}, {self._health}HP, items: {self._items if self._items != [] else "no items"}, weapon: {self._weapon}'
 
 #===================================================================================
 # Mobs
@@ -133,6 +136,6 @@ class Weapon(Item):
         super().__init__(name, type_of_item)
         self._damage = damage
     def __repr__(self):
-        return f'Weapon[Name: {self._name}, type: {self._type}, damage: {self._damage}]'
+        return f'{self._name}, damage: {self._damage}'
     def get_damage(self):
         return self._damage
