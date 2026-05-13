@@ -1,0 +1,12 @@
+2026-05-13 13:51:12,808 - DEBUG - Initializing logger
+2026-05-13 13:51:12,808 - DEBUG - def separator - invocation
+2026-05-13 13:51:12,808 - DEBUG - def separator - invocation
+2026-05-13 13:51:12,808 - DEBUG - def separator - invocation
+2026-05-13 13:51:12,808 - DEBUG - def separator - invocation
+2026-05-13 13:51:12,808 - DEBUG - def main - invocation
+2026-05-13 13:51:12,808 - DEBUG - def logo - invocation
+2026-05-13 13:51:12,808 - DEBUG - def logo - printing the logo's separator
+2026-05-13 13:51:12,808 - DEBUG - def logo - printing the logo
+2026-05-13 13:51:12,808 - DEBUG - def logo - printing the logo's separator
+2026-05-13 13:51:22,813 - DEBUG - def greeting - invocation
+2026-05-13 13:51:22,814 - DEBUG - def greeting - greeting the player

@@ -1,0 +1,43 @@
+2026-05-13 13:53:23,500 - DEBUG - Initializing logger
+2026-05-13 13:53:23,500 - DEBUG - def separator - invocation
+2026-05-13 13:53:23,500 - DEBUG - def separator - invocation
+2026-05-13 13:53:23,500 - DEBUG - def separator - invocation
+2026-05-13 13:53:23,500 - DEBUG - def separator - invocation
+2026-05-13 13:53:23,500 - DEBUG - def main - invocation
+2026-05-13 13:53:23,500 - DEBUG - def logo - invocation
+2026-05-13 13:53:23,500 - DEBUG - def logo - printing the logo's separator
+2026-05-13 13:53:23,500 - DEBUG - def logo - printing the logo
+2026-05-13 13:53:23,500 - DEBUG - def logo - printing the logo's separator
+2026-05-13 13:53:33,506 - DEBUG - def greeting - invocation
+2026-05-13 13:53:33,506 - DEBUG - def greeting - greeting the player
+2026-05-13 13:53:43,511 - DEBUG - def internal - invocation
+2026-05-13 13:53:43,512 - DEBUG - def internal - are we going forward?
+2026-05-13 13:53:52,974 - DEBUG - def verify_answer - invocation
+2026-05-13 13:53:52,974 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-13 13:53:52,975 - DEBUG - def next_thing - we are going forward
+2026-05-13 13:53:52,975 - DEBUG - def print_player_classes - invocation
+2026-05-13 13:53:52,975 - DEBUG - def print_player_classes - printing classes
+2026-05-13 13:53:57,980 - DEBUG - def print_player_classes_description - invocation
+2026-05-13 13:53:57,980 - DEBUG - def print_player_classes_description - printing classes description
+2026-05-13 13:54:00,986 - DEBUG - def internal - invocation
+2026-05-13 13:54:00,986 - DEBUG - def internal - are we going forward?
+2026-05-13 13:54:02,693 - DEBUG - def verify_answer - invocation
+2026-05-13 13:54:02,694 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-13 13:54:02,694 - DEBUG - def next_thing - we are going forward
+2026-05-13 13:54:02,694 - DEBUG - def class_choice - invocation
+2026-05-13 13:54:02,694 - DEBUG - def class_choice - choosing class
+2026-05-13 13:54:02,694 - DEBUG - def read_player_name - invocation
+2026-05-13 13:54:02,694 - DEBUG - def read_player_name - reading player's name
+2026-05-13 13:54:04,729 - DEBUG - def read_player_class - invocation
+2026-05-13 13:54:04,729 - DEBUG - def read_player_class - reading player's class
+2026-05-13 13:54:05,690 - DEBUG - def class_choice - initializing player
+2026-05-13 13:54:17,512 - DEBUG - def verify_answer - invocation
+2026-05-13 13:54:17,513 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-13 13:54:17,513 - DEBUG - def class_choice - going to the game itself
+2026-05-13 13:54:17,513 - DEBUG - def internal - invocation
+2026-05-13 13:54:17,513 - DEBUG - def internal - are we going forward?
+2026-05-13 13:54:26,679 - DEBUG - def verify_answer - invocation
+2026-05-13 13:54:26,679 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-13 13:54:26,679 - DEBUG - def next_thing - we are going forward
+2026-05-13 13:54:26,679 - DEBUG - def quest_get_option - invocation
+2026-05-13 13:54:26,679 - DEBUG - def quest_get_option - getting player's option to the quest

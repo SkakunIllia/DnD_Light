@@ -22,7 +22,6 @@ def separator(func):
 
 @dlog("printing the logo's separator")
 def logo():
-    print("=================================================", end = "")
     logger.debug("def logo - printing the logo")
     print(r""" 
      _                                        
@@ -50,7 +49,9 @@ def logo():
                       __/ |            
                      |___/""", end = "\n")
     logger.debug("def logo - printing the logo's separator")
+    sleep(delay_time)
     print("=================================================")
+
 
 @dlog("verifying whether the answer is positive")
 def verify_answer(string):
@@ -65,7 +66,7 @@ def print_player_classes():
     print("3. Gnome")
     print("4. Ogr")
     print("5. Knight")
-    sleep(delay_time)
+    sleep(delay_time - 5 if delay_time - 5 > 0 else delay_time)
 
 @separator
 @dlog("printing classes description")
@@ -81,7 +82,7 @@ def print_player_classes_description():
     print(f"\tYou posses a mace with which you can hit enemies from medium distance. Health: {Ogr.get_health(Ogr(None))}.")
     print("5. Knight")
     print(f"\tYou posses a silver sword  with which you can hit enemies from short distance. Health: {Knight.get_health(Knight(None))}.")
-    sleep(delay_time)
+    sleep(delay_time - 7 if delay_time - 7 > 0 else delay_time)
 
 @separator
 @dlog("reading player's name")
@@ -165,21 +166,21 @@ def quest_complete(luck, predicate):
     return predicate(luck)
 
 # Global variables:
-delay_time = 1
+delay_time = 10
 
 @dlog()
 def main():
-    # logo()
-    # greeting()
-    # next_thing()
-    # #
-    # print_player_classes()
-    # print_player_classes_description()
-    # next_thing()
+    logo()
+    greeting()
+    next_thing()
+    #
+    print_player_classes()
+    print_player_classes_description()
+    next_thing()
 
-    # player = class_choice()
+    player = class_choice()
 
-    # next_thing()
+    next_thing()
 
     game = gen_desc_main_location()
     quests_desc = gen_desc_quests()
@@ -187,6 +188,7 @@ def main():
         main_location = Location("Main location", i)
         quest = QuestLocation("Quest location", next(quests_desc))
         main_location.print_desc()
+        sleep(delay_time)
         quest.print_desc()
         option = quest_get_option()
         res = is_successful(option)
