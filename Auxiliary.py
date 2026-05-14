@@ -82,6 +82,12 @@ def random():
 def verify_answer(string):
     return match("Yes|yes|aha|Sure|OK|yeah|Yeah|y|Y|yep|Yep", sub(" ", "", string))
 
+@dlog()
+def language():
+    print("Choose a language:")
+    print("""1. English\t2. Polski\t3. Русский\t4. Державна""")
+    input("Enter a number: ")
+
 @separator
 @dlog()
 def next_thing():
