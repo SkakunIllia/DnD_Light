@@ -1,0 +1,88 @@
+2026-05-15 21:40:09,313 - DEBUG - Initializing logger
+2026-05-15 21:40:09,314 - DEBUG - def main - invocation
+2026-05-15 21:40:09,314 - DEBUG - def logo - invocation
+2026-05-15 21:40:09,314 - DEBUG - def logo - printing the logo's separator
+2026-05-15 21:40:09,314 - DEBUG - def logo - printing the logo
+2026-05-15 21:40:09,314 - DEBUG - def logo - printing the logo's separator
+2026-05-15 21:40:14,319 - DEBUG - def language - invocation
+2026-05-15 21:40:17,026 - DEBUG - def greeting - invocation
+2026-05-15 21:40:17,026 - DEBUG - def greeting - greeting the player
+2026-05-15 21:40:22,031 - DEBUG - def print_player_classes - invocation
+2026-05-15 21:40:22,032 - DEBUG - def print_player_classes - printing classes
+2026-05-15 21:40:27,037 - DEBUG - def next_thing - invocation
+2026-05-15 21:40:27,037 - DEBUG - def internal - invocation
+2026-05-15 21:40:27,037 - DEBUG - def internal - are we going forward?
+2026-05-15 21:40:31,527 - DEBUG - def verify_answer - invocation
+2026-05-15 21:40:31,528 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-15 21:40:31,528 - DEBUG - def next_thing - we are going forward
+2026-05-15 21:40:31,529 - DEBUG - def print_player_classes_description - invocation
+2026-05-15 21:40:31,529 - DEBUG - def print_player_classes_description - printing classes description
+2026-05-15 21:40:36,532 - DEBUG - def class_choice - invocation
+2026-05-15 21:40:36,532 - DEBUG - def class_choice - choosing class
+2026-05-15 21:40:36,533 - DEBUG - def read_player_name - invocation
+2026-05-15 21:40:36,533 - DEBUG - def read_player_name - reading player's name
+2026-05-15 21:40:39,061 - DEBUG - def read_player_class - invocation
+2026-05-15 21:40:39,061 - DEBUG - def read_player_class - reading player's class
+2026-05-15 21:40:39,888 - DEBUG - def class_choice - initializing player
+2026-05-15 21:40:39,888 - DEBUG - def initialize_entity - invocation
+2026-05-15 21:40:41,675 - DEBUG - def verify_answer - invocation
+2026-05-15 21:40:41,676 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-15 21:40:41,676 - DEBUG - def class_choice - going to the game itself
+2026-05-15 21:40:41,676 - DEBUG - def game - invocation
+2026-05-15 21:40:41,676 - DEBUG - def main_location1 - invocation
+2026-05-15 21:40:46,681 - DEBUG - def quest1 - invocation
+2026-05-15 21:40:50,686 - DEBUG - def quest_get_option - invocation
+2026-05-15 21:40:50,687 - DEBUG - def quest_get_option - getting player's option to the quest
+2026-05-15 21:40:55,437 - DEBUG - def quest_get_option - invocation
+2026-05-15 21:40:55,437 - DEBUG - def quest_get_option - getting player's option to the quest
+2026-05-15 21:40:55,437 - DEBUG - def quest_get_option - invocation
+2026-05-15 21:40:55,437 - DEBUG - def quest_get_option - getting player's option to the quest
+2026-05-15 21:40:55,771 - DEBUG - def quest_get_option - invocation
+2026-05-15 21:40:55,771 - DEBUG - def quest_get_option - getting player's option to the quest
+2026-05-15 21:40:56,891 - DEBUG - def quest_get_option - invocation
+2026-05-15 21:40:56,891 - DEBUG - def quest_get_option - getting player's option to the quest
+2026-05-15 21:40:57,672 - DEBUG - def quest_get_option - invocation
+2026-05-15 21:40:57,672 - DEBUG - def quest_get_option - getting player's option to the quest
+2026-05-15 21:40:58,275 - DEBUG - def quest_get_option - invocation
+2026-05-15 21:40:58,276 - DEBUG - def quest_get_option - getting player's option to the quest
+2026-05-15 21:40:59,486 - DEBUG - def quest_get_option - improper option
+2026-05-15 21:40:59,486 - DEBUG - def quest_get_option - invocation
+2026-05-15 21:40:59,486 - DEBUG - def quest_get_option - getting player's option to the quest
+2026-05-15 21:41:01,319 - DEBUG - def quest_is_successful - invocation
+2026-05-15 21:41:01,319 - INFO - def quest_is_successful - option 1
+2026-05-15 21:41:01,319 - DEBUG - def random - invocation
+2026-05-15 21:41:01,319 - DEBUG - def quest_complete - invocation
+2026-05-15 21:41:01,319 - INFO - def quest1 - is option successful? True
+2026-05-15 21:41:01,319 - INFO - def quest1 - the player leaves the quest
+2026-05-15 21:41:01,319 - DEBUG - def next_thing - invocation
+2026-05-15 21:41:01,319 - DEBUG - def internal - invocation
+2026-05-15 21:41:01,319 - DEBUG - def internal - are we going forward?
+2026-05-15 21:41:02,987 - DEBUG - def verify_answer - invocation
+2026-05-15 21:41:02,988 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-15 21:41:02,989 - DEBUG - def next_thing - additional time to make decision
+2026-05-15 21:41:04,992 - DEBUG - def internal - invocation
+2026-05-15 21:41:04,992 - DEBUG - def internal - are we going forward?
+2026-05-15 21:41:05,905 - DEBUG - def verify_answer - invocation
+2026-05-15 21:41:05,906 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-15 21:41:05,906 - DEBUG - def next_thing - additional time to make decision
+2026-05-15 21:41:07,906 - DEBUG - def internal - invocation
+2026-05-15 21:41:07,906 - DEBUG - def internal - are we going forward?
+2026-05-15 21:41:09,094 - DEBUG - def verify_answer - invocation
+2026-05-15 21:41:09,094 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-15 21:41:09,094 - DEBUG - def next_thing - additional time to make decision
+2026-05-15 21:41:11,098 - DEBUG - def internal - invocation
+2026-05-15 21:41:11,098 - DEBUG - def internal - are we going forward?
+2026-05-15 21:41:11,965 - DEBUG - def verify_answer - invocation
+2026-05-15 21:41:11,965 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-15 21:41:11,965 - DEBUG - def next_thing - additional time to make decision
+2026-05-15 21:41:13,969 - DEBUG - def internal - invocation
+2026-05-15 21:41:13,969 - DEBUG - def internal - are we going forward?
+2026-05-15 21:41:16,730 - DEBUG - def verify_answer - invocation
+2026-05-15 21:41:16,730 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-15 21:41:16,730 - DEBUG - def next_thing - additional time to make decision
+2026-05-15 21:41:18,731 - DEBUG - def internal - invocation
+2026-05-15 21:41:18,731 - DEBUG - def internal - are we going forward?
+2026-05-15 21:41:20,021 - DEBUG - def verify_answer - invocation
+2026-05-15 21:41:20,021 - DEBUG - def verify_answer - verifying whether the answer is positive
+2026-05-15 21:41:20,021 - DEBUG - def next_thing - we are going forward
+2026-05-15 21:41:20,021 - DEBUG - def end_of_game - invocation

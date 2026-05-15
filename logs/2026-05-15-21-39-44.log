@@ -1,0 +1,7 @@
+2026-05-15 21:39:44,030 - DEBUG - Initializing logger
+2026-05-15 21:39:44,031 - DEBUG - def main - invocation
+2026-05-15 21:39:44,031 - DEBUG - def logo - invocation
+2026-05-15 21:39:44,031 - DEBUG - def logo - printing the logo's separator
+2026-05-15 21:39:44,031 - DEBUG - def logo - printing the logo
+2026-05-15 21:39:44,031 - DEBUG - def logo - printing the logo's separator
+2026-05-15 21:39:49,033 - DEBUG - def language - invocation
