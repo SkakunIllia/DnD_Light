@@ -5,14 +5,15 @@ from functools import wraps
 
 # Logger
 def log():
+    log_dir = "logs"
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir, exist_ok=True)
+
     path = "logs/*.log"
     files = glob(path)
     if len(files) >= 5:
         os.remove(files[0])
 
-    log_dir = "logs"
-    if not os.path.exists(log_dir):
-        os.makedirs(log_dir, exist_ok=True)
 
     date_now = datetime.now().strftime("%Y-%m-%d-%H-%M-%S") + ".log"
     log_path = os.path.join(log_dir, date_now)

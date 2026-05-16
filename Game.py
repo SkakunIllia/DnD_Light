@@ -1,4 +1,5 @@
 from Entities import *
+from Saver import *
 import DeathException
 
 #===================================================================================
@@ -29,12 +30,6 @@ def gen_desc_quests():
         res = dsc[index]
         index += 1
         yield res
-
-#===================================================================================
-# Global variables
-mob_names = ["Zombie", "Skeleton", "Ogr", "Giant"]
-quest_desc = gen_desc_quests()
-main_locations_desc = gen_desc_main_locations()
 
 #===================================================================================
 # Functions
@@ -140,25 +135,39 @@ def quest1(player):
 
 @separator
 @dlog()
-def quest2():
+def quest2(player):
     pass
 
 @separator
 @dlog()
-def main_location1():
+def main_location1(player):
     desc = next(main_locations_desc)
     print(desc)
     sleep(delay_time)
 
+#===================================================================================
+# Global variables
+mob_names = ["Zombie", "Skeleton", "Ogr", "Giant"]
+quest_desc = gen_desc_quests()
+game_quests = (main_location1, quest1)
+load_ingame_progres = load(None)
+ingame_progress = load_ingame_progres if ((load_ingame_progres is not None) and (load_ingame_progres > 0)) else 0
+main_locations_desc = gen_desc_main_locations()
+
+bin_file = 0
+
+#===================================================================================
+# Main game function
 @dlog()
 def game(player):
     try:
-        main_location1()
-        next_thing()
-        quest1(player)
-        # next_thing()
+        for i, location in enumerate(game_quests):
+            if i < ingame_progress:
+                continue
+            location(player)
+            next_thing()
         end_of_game()
-        input()
+        if bin_file: input()
     except DeathException:
         death()
 
