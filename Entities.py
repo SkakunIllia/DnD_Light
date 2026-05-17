@@ -123,7 +123,7 @@ class Knight(Player):
         return f'Knight {self._name}, {self._health}HP, items: {self._items if self._items != [] else "no items"}, weapon: {self._weapon}'
 
 class Ogre(Player):
-    def __init__(self, name, player_class = "Ogr", items = None, health = 150, weapon = Weapon("Greeny mace", 80), progress = 0):
+    def __init__(self, name, player_class = "Ogre", items = None, health = 150, weapon = Weapon("Greeny mace", 80), progress = 0):
         super().__init__(name, player_class)
         if items is None:
             items = list()
